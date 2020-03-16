@@ -168,7 +168,7 @@ If you just want to build a Digital Signage Player that opens the URL specified 
 
 ## Preparing for a CMS/server setup (optional)
 
-For the server part (running a wordpress CMS standalone or besides the player) follow the instructions for the player but additionally also edit the file `00-zsrv_rootafterboot.bash`. This file will be copied to `/root/srv_rootafterbiit,bash` to the Pi, so it is even possible to edit it later directly on the Pi if you currently don't know if the Pi should become a "server" or not.
+For the server part (running a wordpress CMS standalone or besides the player) follow the instructions for the player but additionally also edit the file `00-zsrv_rootafterboot.bash`. This file will be copied to `/root/srv_rootafterboot,bash` to the Pi, so it is even possible to edit it later directly on the Pi if you currently don't know if the Pi should become a "server" or not.
 
 ### 00-zsrv_rootafterboot.bash
 

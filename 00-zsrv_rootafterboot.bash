@@ -44,9 +44,12 @@ printf "\n%s\n"  "Internet is accessible."
 # check for multiple IPs and break if so
 ########################################################################
 # get first 3 octets of network of default route
-network=$(route -n | grep "^0.0.0.0" | awk '{print $2}' | awk -F '.' '{print $1"."$2"."$3"."}')
+#network=$(route -n | grep "^0.0.0.0" | awk '{print $2}' | awk -F '.' '{print $1"."$2"."$3"."}')
 # find ip from that network
-wpip=$(ip addr | grep "$network" | awk '{print $2}' | awk -F '/' '{print $1}')
+#wpip=$(ip addr | grep "$network" | awk '{print $2}' | awk -F '/' '{print $1}')
+# next line grabbed from CentOs8 /usr/share/cockpit/motd/update-motd script
+# looks much simpler :) leaving old lines in with a comment just in case...
+wpip=${3:-$(ip -o route get 255.0 2>/dev/null | sed -e 's/.*src \([^ ]*\) .*/\1/')}
 ipcount=$(echo "$wpip" | wc -l)
 if [ "$ipcount" != "1" ]
 then

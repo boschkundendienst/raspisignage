@@ -266,7 +266,7 @@ ln -sfrn /dev/shm/chromium /home/alarm/.cache/chromium
 #/usr/lib/firefox/firefox --kiosk \$url &
 
 # Chromium in kiosk mode with url (make sure there is an '&' at the end
-/usr/bin/chromium --disable-breakpad --start-fullscreen --incognito --no-first-run --disable-session-crashed-bubble --temp-profile --disable-infobars --noerrdialogs --noerrors --kiosk \$url &
+/usr/bin/chromium --disable-features=TranslateUI --disable-breakpad --start-fullscreen --incognito --no-first-run --disable-session-crashed-bubble --temp-profile --disable-infobars --noerrdialogs --noerrors --kiosk \$url &
 
 # START OMXPLAYER with youtube URL
 #youtubeurl='https://www.youtube.com/watch?v=sajBySPeYH0' # Raspberry Pi 4: your new $35 computer

@@ -19,12 +19,33 @@ initline=$(grep "^initramfs.*$" /boot/config.txt)
 # write values to config.txt
 cat >"/boot/config.txt" <<EOL
 # See /boot/overlays/README for all available options
+#disable_overscan=1
+#dtparam=audio=on
+#hdmi_drive=2
+#hdmi_group=2
+#hdmi_mode=82
+#hdmi_force_hotplug=1
+# See /boot/overlays/README for all available options
+
+# Set disable_overscan to 1 to disable the default values of overscan that is set by the firmware.
+# The default value of overscan for the left, right, top, and bottom edges is 48 for HD CEA modes,
+# 32 for SD CEA modes, and 0 for DMT modes. The default value for disable_overscan is 0
 disable_overscan=1
-dtparam=audio=on
+
+#dtparam=audio=on
+
+#Normal HDMI mode (sound will be sent if supported and enabled)
 hdmi_drive=2
+
+# 2 DMT timing
+# 1 TV timing
+# 0 auto-detect from EDID
 hdmi_group=2
-hdmi_mode=82
-hdmi_force_hotplug=1
+
+# The gpu_mem_1024 command sets the GPU memory in megabytes for Raspberry Pi devices with 1024MB
+# or more of memory. (It is ignored if memory size is smaller than 1024MB). This overrides
+# gpu_mem. The maximum value is 944, and the default is not set.
+gpu_mem_1024=64
 EOL
 echo -e -n "\n$initline\n" >> /boot/config.txt
 echo "done"

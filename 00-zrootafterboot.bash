@@ -30,7 +30,6 @@ cat >"/boot/config.txt" <<EOL
 #hdmi_group=2
 #hdmi_mode=82
 #hdmi_force_hotplug=1
-# See /boot/overlays/README for all available options
 
 # Set disable_overscan to 1 to disable the default values of overscan that is set by the firmware.
 # The default value of overscan for the left, right, top, and bottom edges is 48 for HD CEA modes,

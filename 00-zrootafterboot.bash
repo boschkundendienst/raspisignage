@@ -19,6 +19,11 @@ initline=$(grep "^initramfs.*$" /boot/config.txt)
 # write values to config.txt
 cat >"/boot/config.txt" <<EOL
 # See /boot/overlays/README for all available options
+# The settings below should work for a Pi 4 where the
+# HDMI cable is connected to the HDMI port that is
+# most away from the USB-C power
+# It might be necessary to update config.txt
+# to your needs especially for your specific monitor
 #disable_overscan=1
 #dtparam=audio=on
 #hdmi_drive=2

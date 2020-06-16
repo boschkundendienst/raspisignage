@@ -404,3 +404,7 @@ During the wordpress installation the plugin [All in One WP Security & Firewall]
 ### Ramdisk
 
 The installation routine does some folder linkage to point most temporary folders Chromium or Firefox uses to `/dev/shm/chromium` or `/dev/shm/mozilla`. `/dev/shm` is the built in Linux RAMDisk. Using it speeds things up and avoids unnecessary writes to the SD card.
+
+### VNC server
+
+If you have no monitor available and want to test your setup remotely consider using a VNC server as described [here](README_VNC.md).

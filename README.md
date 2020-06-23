@@ -148,6 +148,8 @@ network={
 }
 ```
 
+You could also use the [Raspberry Pi Wifi Config Generator](https://steveedson.co.uk/tools/wpa/), a cool online tool to generate the above network section.
+
 Just add the section you created at the end of `00-b_wpa_supplicant-wlan0.conf` and the Pi will later automatically connect to your Wifi network.
 
 For more information about the syntax take a look at the [ArchWiki (wpa_supplicant)](https://wiki.archlinux.org/index.php/Wpa_supplicant).

@@ -1,4 +1,7 @@
 # Digital Signage with archlinux|ARM and Raspberry Pi
+
+<p align="center"><img src="documentation_DE/images/raspisignage-boot-splash.png" border="0" width="50%" style="border:0px solid gray"></p>
+
 <!-- TOC -->
 
 - [Digital Signage with archlinux|ARM and Raspberry Pi](#digital-signage-with-archlinuxarm-and-raspberry-pi)

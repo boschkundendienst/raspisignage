@@ -27,6 +27,7 @@
         - [Restore/Clone entire system](#restoreclone-entire-system)
         - [Backup wordpress](#backup-wordpress)
         - [Ramdisk](#ramdisk)
+        - [VNC server](#vnc-server)
 
 <!-- /TOC -->
 ## What is RaspiSignage?

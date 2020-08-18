@@ -63,7 +63,7 @@ The setup has been tested on a RaspberryPi 3B+ with 512MB RAM and a RaspberryPi 
 Clone this repo to your Linux computer (will not work on Windows!) and `cd` into the subfolder `raspisignage`.
 
 ```
-$ git clone git@github.com:boschkundendienst/raspisigage.git
+$ git clone https://github.com/boschkundendienst/raspisignage.git
 Cloning into 'raspisigage'...
 remote: Enumerating objects: 122, done.
 remote: Counting objects: 100% (122/122), done.

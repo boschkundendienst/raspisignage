@@ -198,7 +198,7 @@ wppath='/srv/http'
 
 ## Running the scripts to prepare the SD card (on your Linux box)
 
-**This part of the setup needs to be executed on your Linux box. It will not work on Windows and has been tested mainly using [archlinux](https://www.archlinux.org/) but should work with Ubuntu (18.04+ with bsdtar installed), too. It should also work on most other Linux distros.**
+**This part of the setup needs to be executed on your Linux box. It will not work on Windows and has been tested mainly using [archlinux](https://www.archlinux.org/) but should work with Ubuntu (18.04+ with bsdtar installed), too. It should also work on most other Linux distros. On Ubuntu 20.04 you have to install the package `libarchive-tools` to get bsdtar installed.**
 
 After setting everything up in the configuration files we execute a set of scripts to automatically download archlinux|ARM, partition the SD card, write the rootfs to the SD card and preconfigure the system on the SD card. Execute the scripts in the following order:
 

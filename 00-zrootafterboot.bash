@@ -133,7 +133,7 @@ if [ "$1" == "--force" ];then installed='';fi # override when --force
 # noto-fonts-emoji (  9 MB)
 # noto-fonts-extra (321 MB)
 #
-packages="fluxbox,xorg-server,xf86-video-fbdev,xorg-xmodmap,xorg-xinit,xorg-xset,accountsservice,lightdm,lightdm-gtk-greeter,unclutter,firefox,chromium,ttf-liberation,feh,alsa-tools,alsa-utils,alsa-firmware,xf86-video-fbturbo-git,youtube-dl,rtmpdump,python-pycryptodome,omxplayer-git,vim" # noto-fonts,noto-fonts-cjk,noto-fonts-emoji,noto-fonts-extra"
+packages="fluxbox,xorg-server,xf86-video-fbdev,xorg-xmodmap,xorg-xinit,xorg-xset,accountsservice,lightdm,lightdm-gtk-greeter,unclutter,firefox,chromium,ttf-liberation,feh,alsa-tools,alsa-utils,alsa-firmware,xf86-video-fbturbo-git,youtube-dl,rtmpdump,python-pycryptodome,omxplayer-git,vim,cronie" # noto-fonts,noto-fonts-cjk,noto-fonts-emoji,noto-fonts-extra"
 # install packages from list
 for i in $(echo $packages | sed "s/,/ /g")
 do

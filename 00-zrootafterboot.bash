@@ -154,7 +154,7 @@ gpasswd -a alarm audio
 # create /etc/crontab and fill with some commented stuff
 # and enable cronie. User can uncomment lines to have some funny vids
 ########################################################################
-cat >"/etc/crontab" <<'EOL'
+cat >>"/etc/crontab" <<'EOL'
 #Min Hour Day Month DayOfWeek user Command
 ## Rundschau 100 Sekunden
 #0 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.br.de/br-fernsehen/sendungen/rundschau/rundschau-news100.html')" >/dev/null 2>&1

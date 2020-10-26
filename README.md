@@ -414,3 +414,12 @@ The installation routine does some folder linkage to point most temporary folder
 ### VNC server
 
 If you have no monitor available and want to test your setup remotely consider using a VNC server as described [here](README_VNC.md).
+
+
+### mlbrowser
+
+The subfolder `build_mlbrowser` contains the script `build_mlbrowser.bash` that let's you build mlbrowser for the Raspberry Pi. After compilation you can use mlbrowser to start a browser using the framebuffer like this:
+
+```bash
+mlbrowser -z 1 -platform linuxfb https://github.com/boschkundendienst/raspisignage
+```

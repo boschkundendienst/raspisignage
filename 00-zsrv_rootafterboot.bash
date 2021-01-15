@@ -290,6 +290,12 @@ php wp-cli.phar --path=/srv/http --allow-root language plugin update --all
 php wp-cli.phar --path=/srv/http --allow-root language theme update --all
 
 ########################################################################
+# set theme to twentytwenty because twentytwentyone has problems
+# with foyer plugin
+########################################################################
+php wp-cli.phar --path=/srv/http --allow-root theme activate twentytwenty
+
+########################################################################
 # set permissions on webroot to allow uploads for user http
 ########################################################################
 chown -R -- http:http "${wppath}"

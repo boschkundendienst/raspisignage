@@ -90,13 +90,13 @@ using your favorite editor.
 
 Before you edit this file, insert the SD card into your Linux machine and use the command `dmesg -w` to determine the device name. Names like `/dev/mmcblk` are often used if your machine has a built in SD card reader and the SD card is often named `/dev/sdX` if you use an external SD card reader.
 
-The value is needed for `00-a_client.conf` to build the correct names to create and access **partition 1** and **partition 2** of the SD card. The combination of the variables `mydrive` and `mydrivesuff` in `00-a_client.conf` must reflect the name of the SD card device in your machine.
+The value is needed for `00-a_client.conf` to build the correct names to create and access **partition 1** and **partition 2** of the SD card. The variable `mydrive` will be used to find out the correct partition naming and `mydrivesuff` will be automatically set accordingly in `00-a_client.conf` to reflect the correct partition naming in your machine.
 
 **Example 1 (SD card is `/dev/sde`)**
 
 ```
 mydrive='/dev/sde'
-mydrivesuff='' # 1 or 2 will be added automatically
+# mydrivesuff will calculated as '' and 1 or 2 will be added automatically
 ```
 
 will result in `/dev/sde1` and `/dev/sde2` which is correct to use this drive with the scripts.
@@ -105,7 +105,7 @@ will result in `/dev/sde1` and `/dev/sde2` which is correct to use this drive wi
 
 ```
 mydrive='/dev/mmcblk0'
-mydrivesuff='p' # 1 or 2 will be added automatically
+# mydrivesuff will be calculated as 'p' # 1 or 2 will be added automatically
 ```
 
 will result in `/dev/mmcblk0p1` and `/dev/mmcblk0p2` which is correct to use this drive with the scripts.
@@ -116,7 +116,6 @@ Here are all the default entries from `00-a_client.conf` which should work out o
 
 ```
 mydrive='/dev/mmcblk0'
-mydrivesuff='p' # 'p' is needed for /dev/mmcblkX devices '' for /dev/sdX
 mydlurl='http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-4-latest.tar.gz'
 myoutputfile='./ArchLinuxARM-rpi.tar.gz'
 mykbdlayout='de-latin1-nodeadkeys'

@@ -395,7 +395,7 @@ $ tar --exclude='/run/*' \
     --exclude='/var/lock/*' \
     --exclude='.gvfs' \
     --exclude='lost+found' \
-    -zcvf - / | ssh user@192.168.1.24 'cat - > "/home/user/raspisignage/p4-dsclient-backup.tar.gz"'
+    -zcf - / | ssh user@192.168.1.24 'cat - > "/home/user/raspisignage/p4-dsclient-backup.tar.gz"'
 ```
 
 ### Restore/Clone entire system

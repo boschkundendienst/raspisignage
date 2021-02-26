@@ -63,6 +63,8 @@ echo -e "\t\t\tdone"
 ########################################################################
 # create partitions
 ########################################################################
+echo "Erasing first 1024 bytes of ${mydrive} for a clean start!"
+dd if=/dev/zero of=${mydrive} bs=1M count=1
 echo "Creating part 1 100MB vfat on ${mydrive}${mydrivesuff}1 and"
 echo -n "         part 2  rest ext4 on ${mydrive}${mydrivesuff}2..."
 sfdisk "$mydrive" >/dev/null 2>&1 <<EOL

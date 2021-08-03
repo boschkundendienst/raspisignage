@@ -42,12 +42,21 @@ Then create the **drop-in-file** `/etc/systemd/system/x11vnc.service.d/override.
 
 ```
 # /etc/systemd/system/x11vnc.service.d/override.conf
+[Unit]
+After=
+After=multi-user.target
+
 [Service]
 # Set password by running `sudo x11vnc -storepasswd [PASSWORD] /etc/x11vnc.passwd`
 ExecStart=
 ExecStart=/usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /etc/x11vnc.passwd -rfbport 5900 -shared
+Restart=
+Restart=on-failure
+RestartSec=
+RestartSec=2
 
 [Install]
+WantedBy=
 WantedBy=multi-user.target
 ```
 

@@ -27,7 +27,7 @@ $# pacman -S x11vnc --noconfirm
 Now create the file containing the VNC password (`/etc/x11vnc.passwd`) by executing the following command:
 
 ```
-$# x11vnc -storepasswd alarm /etc/x11vnc.passwd # password 'alarm'
+$# x11vnc -storepasswd alarm /etc/x11vnc.passwd # where the password is 'alarm'
 ```
 
 ## Create x11-vnc systemd drop-in override
@@ -46,6 +46,9 @@ Then create the **drop-in-file** `/etc/systemd/system/x11vnc.service.d/override.
 # Set password by running `sudo x11vnc -storepasswd [PASSWORD] /etc/x11vnc.passwd`
 ExecStart=
 ExecStart=/usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /etc/x11vnc.passwd -rfbport 5900 -shared
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 Now reload the systemd configuration files with

@@ -5,7 +5,7 @@
 # This script creates 2 partitions on the SD card specified by
 # the variables 'mydrive' and 'mydrivesuff' (00-a_client.conf).
 #
-# part1        100MB               vfat (e.g. /dev/mmcblk0p1)
+# part1        200MB               vfat (e.g. /dev/mmcblk0p1)
 # part2        rest of SD card     ext4 (e.g. /dev/mmcblk0p2)
 ########################################################################
 
@@ -65,11 +65,11 @@ echo -e "\t\t\tdone"
 ########################################################################
 echo "Erasing first 1024 bytes of ${mydrive} for a clean start!"
 dd if=/dev/zero of=${mydrive} bs=1M count=1
-echo "Creating part 1 100MB vfat on ${mydrive}${mydrivesuff}1 and"
+echo "Creating part 1 200MB vfat on ${mydrive}${mydrivesuff}1 and"
 echo -n "         part 2  rest ext4 on ${mydrive}${mydrivesuff}2..."
 sfdisk "$mydrive" >/dev/null 2>&1 <<EOL
-start=        2048, size=      204800, type=c
-start=      206848, type=83
+start=        2048, size=      409600, type=c
+start=      411648, type=83
 EOL
 echo -e "\t\t\tdone"
 

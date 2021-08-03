@@ -57,9 +57,9 @@ echo "done"
 ########################################################################
 # check internet connection (archlinuxarm.org)                         #
 ########################################################################
-while ! timeout 5 ping -c 1 -n archlinuxarm.org &> /dev/null
+while ! timeout 5 curl -s https://archlinuxarm.org/ &> /dev/null
 do
-    printf "%s\n" "no internet connection, please check! - Ctrl+C to exit!"
+    printf "%s\n" "no internet connection, please check! - Long press Ctrl+C to exit!"
     sleep 1
 done
 printf "\n%s\n"  "Internet is accessible."

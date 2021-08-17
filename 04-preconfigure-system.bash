@@ -233,6 +233,7 @@ sed -i "s/#${mycs}/${mycs}/g" ./root/etc/locale.gen
 # Create the locale.conf(5) file, and set the LANG variables accordingly
 echo "LANG=$mylang" > ./root/etc/locale.conf
 echo "LC_COLLATE=$mycoll" >> ./root/etc/locale.conf
+echo "LANGUAGE=C" >> ./root/etc/locale.conf
 #echo "LANGUAGE=$mylang" >> ./root/etc/locale.conf
 #echo "LC_MONETARY=$mylang" >> ./root/etc/locale.conf
 #echo "LC_PAPER=$mylang" >> ./root/etc/locale.conf

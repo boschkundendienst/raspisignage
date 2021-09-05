@@ -146,8 +146,8 @@ echo 'include "conf.d/fastcgi.conf"' >> /etc/lighttpd/lighttpd.conf
 # activate mysqli in php.ini
 sed -i "s@;\(extension=mysqli\)@\1@g" /etc/php/php.ini
 # activate imagick.so by editiing imagick.ini
-sed -i 's@;\(extension*\)@\1@g' /etc/php/conf.d/imagick.ini
-sed -i 's@;\(imagick.skip_version_check*\)@\1@g' /etc/php/conf.d/imagick.ini
+sed -i 's@;.*\(extension*\)@\1@g' /etc/php/conf.d/imagick.ini
+sed -i 's@;.*\(imagick.skip_version_check*\)@\1@g' /etc/php/conf.d/imagick.ini
 
 # set upload settings in php.ini
 #max_execution_time = 300

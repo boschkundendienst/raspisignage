@@ -327,6 +327,8 @@ echo "##############################################"
 echo -e "\nOpen ${wpurl}/wp-admin now and login with the following credentials:\n"
 echo -e "User: ${wpadmin}"
 echo -e "Pass: ${wpadminpass}\n"
+echo -e "\n\nYou should reboot now to glue everything together!"
+echo -e "Make sure to write down the above login credentials before!\n"
 
 ########################################################################
 #  END END END END END END END END END END END END END END END END END #

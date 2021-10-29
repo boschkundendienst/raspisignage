@@ -327,7 +327,7 @@ ln -sfrn /dev/shm/chromium /home/alarm/.cache/chromium
 # Chromium in kiosk mode with url (make sure there is an '&' at the end
 # --no-xshm makes Chromium work again!
 # see https://archlinuxarm.org/forum/viewtopic.php?f=15&t=15001&p=65896&hilit=chromium#p65717
-/usr/bin/chromium --ignore-certificate-errors --disable-features=TranslateUI --disable-features=Translate --disable-breakpad --start-fullscreen --incognito --no-first-run --disable-session-crashed-bubble --temp-profile --disable-infobars --noerrdialogs --noerrors --kiosk --no-xshm \$url &
+/usr/bin/chromium --ignore-certificate-errors --disable-features=TranslateUI --disable-features=Translate --disable-breakpad --start-fullscreen --incognito --no-first-run --disable-session-crashed-bubble --temp-profile --disable-infobars --noerrdialogs --noerrors --kiosk --no-xshm --no-shm \$url &
 
 # START OMXPLAYER with youtube URL
 #youtubeurl='https://www.youtube.com/watch?v=sajBySPeYH0' # Raspberry Pi 4: your new $35 computer

@@ -50,6 +50,15 @@ hdmi_group=2
 # or more of memory. (It is ignored if memory size is smaller than 1024MB). This overrides
 # gpu_mem. The maximum value is 944, and the default is not set.
 gpu_mem_1024=64
+
+# needed on Pi4 to make Chrome work again
+# decide yourself
+##dtoverlay=vc4-kms-v3d
+
+# needed on some Pi3s to make lightdm work again
+# decide yourself
+##dtoverlay=vc4-fkms-v3d
+
 EOL
 echo -e -n "\n$initline\n" >> /boot/config.txt
 echo "done"

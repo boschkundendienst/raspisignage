@@ -335,7 +335,7 @@ ln -sfrn /dev/shm/chromium /home/alarm/.cache/chromium
 # mlbrowser
 # look in the build_mlbrowser subfolder of the project
 # for a documentation how to compile it yourself.
-# /usr/local/bin/mlbrowser -z 1 -platform eglfs $url
+# /usr/local/bin/mlbrowser -z 1 -platform eglfs \$url
 
 # Chromium in kiosk mode with url (make sure there is an '&' at the end
 # --no-xshm makes Chromium work again!

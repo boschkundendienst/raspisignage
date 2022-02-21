@@ -1,8 +1,8 @@
 #!/bin/bash
   
 # install prerequisites
-pacman -Syu
-pacman -S qt5-webkit git gcc make
+pacman -Syu --noconfirm
+pacman -S qt5-webkit git gcc make --noconfirm
 
 # clone repository
 git clone https://github.com/Topguy/mlbrowser.git

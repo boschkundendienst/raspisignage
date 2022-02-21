@@ -332,6 +332,11 @@ ln -sfrn /dev/shm/chromium /home/alarm/.cache/chromium
 # Firefox needs ~150MB more RAM
 #/usr/lib/firefox/firefox --kiosk \$url &
 
+# mlbrowser
+# look in the build_mlbrowser subfolder of the project
+# for a documentation how to compile it yourself.
+# /usr/local/bin/mlbrowser -z 1 -platform eglfs $url
+
 # Chromium in kiosk mode with url (make sure there is an '&' at the end
 # --no-xshm makes Chromium work again!
 # see https://archlinuxarm.org/forum/viewtopic.php?f=15&t=15001&p=65896&hilit=chromium#p65717

@@ -170,25 +170,8 @@ cat >>"/etc/crontab" <<'EOL'
 #5 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.zdf.de/nachrichten/heute-sendungen/videos/heute-xpress-aktuelle-sendung-100.html')" > /dev/null 2>&1
 ## Tagesschau 100 Sekunden
 #10 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.tagesschau.de/100sekunden/')" > /dev/null 2>&1
-## Morgennachrichten heute SAT1
-#15 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g "$(/usr/bin/date +'https://www.sat1.de/news/video/morgennachrichten-\%d-\%m-\%Y-clip')")" > /dev/null 2>&1
 ## Earth
 #20 * * * * root /usr/bin/omxplayer --vol -90000 "$(/usr/bin/youtube-dl -f mp4 -g 'https://www.youtube.com/watch?v=HiN6Ag5-DrU')" > /dev/null 2>&1
-## OTV Wetterschau von heute
-#25 * * * * root /usr/bin/omxplayer --vol -900 $(/usr/bin/youtube-dl -g "$(/usr/bin/date +'https://www.otv.de/mediathek/kategorie/sendungen/otv-wetterschau/video/das-wetter-vom-\%d-\%m-\%Y/')") > /dev/null 2>&1
-############ RUN 2
-## Rundschau 100 Sekunden
-#30 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.br.de/br-fernsehen/sendungen/rundschau/rundschau-news100.html')" >/dev/null 2>&1
-## Heute Xpress aktuelle Sendung
-#35 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.zdf.de/nachrichten/heute-sendungen/videos/heute-xpress-aktuelle-sendung-100.html')" > /dev/null 2>&1
-## Tagesschau 100 Sekunden
-#40 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.tagesschau.de/100sekunden/')" > /dev/null 2>&1
-## Morgennachrichten heute SAT1
-#45 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g "$(/usr/bin/date +'https://www.sat1.de/news/video/morgennachrichten-\%d-\%m-\%Y-clip')")" > /dev/null 2>&1
-## Earth
-#50 * * * * root /usr/bin/omxplayer --vol -90000 "$(/usr/bin/youtube-dl -f mp4 -g 'https://www.youtube.com/watch?v=HiN6Ag5-DrU')" > /dev/null 2>&1
-## -1080'TV Wetterschau von heute
-#55 * * * * root /usr/bin/omxplayer --vol -900 $(/usr/bin/youtube-dl -g "$(/usr/bin/date +'https://www.otv.de/mediathek/kategorie/sendungen/otv-wetterschau/video/das-wetter-vom-\%d-\%m-\%Y/')") > /dev/null 2>&1
 EOL
 systemctl start cronie
 systemctl enable cronie

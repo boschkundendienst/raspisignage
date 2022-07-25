@@ -1,6 +1,6 @@
 # Digital Signage with archlinux|ARM and Raspberry Pi
 
-<p align="center"><img src="documentation_DE/images/raspisignage-boot-splash.png" border="0" width="50%" style="border:0px solid gray"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/boschkundendienst/raspisignage/master/documentation_DE/images/raspisignage-boot-splash.png" border="0" width="50%" style="border:0px solid gray"></p>
 
 <!-- TOC -->
 

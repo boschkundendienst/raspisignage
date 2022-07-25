@@ -164,6 +164,9 @@ gpasswd -a alarm audio
 ########################################################################
 cat >>"/etc/crontab" <<'EOL'
 #Min Hour Day Month DayOfWeek user Command
+## disable WiFi completely
+#@reboot /usr/bin/iwconfig wlan0 txpower off
+
 ## Rundschau 100 Sekunden
 #0 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.br.de/br-fernsehen/sendungen/rundschau/rundschau-news100.html')" >/dev/null 2>&1
 ## Heute Xpress aktuelle Sendung

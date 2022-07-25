@@ -168,13 +168,13 @@ cat >>"/etc/crontab" <<'EOL'
 #@reboot /usr/bin/iwconfig wlan0 txpower off
 
 ## Rundschau 100 Sekunden
-#0 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.br.de/br-fernsehen/sendungen/rundschau/rundschau-news100.html')" >/dev/null 2>&1
+#0 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/yt-dlp -g 'https://www.br.de/br-fernsehen/sendungen/rundschau/rundschau-news100.html')" >/dev/null 2>&1
 ## Heute Xpress aktuelle Sendung
-#5 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.zdf.de/nachrichten/heute-sendungen/videos/heute-xpress-aktuelle-sendung-100.html')" > /dev/null 2>&1
+#5 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/yt-dlp -g 'https://www.zdf.de/nachrichten/heute-sendungen/videos/heute-xpress-aktuelle-sendung-100.html')" > /dev/null 2>&1
 ## Tagesschau 100 Sekunden
-#10 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/youtube-dl -g 'https://www.tagesschau.de/100sekunden/')" > /dev/null 2>&1
+#10 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/yt-dlp -g 'https://www.tagesschau.de/100sekunden/')" > /dev/null 2>&1
 ## Earth
-#20 * * * * root /usr/bin/omxplayer --vol -90000 "$(/usr/bin/youtube-dl -f mp4 -g 'https://www.youtube.com/watch?v=HiN6Ag5-DrU')" > /dev/null 2>&1
+#20 * * * * root /usr/bin/omxplayer --vol -90000 "$(/usr/bin/yt-dlp -f mp4 -g 'https://www.youtube.com/watch?v=HiN6Ag5-DrU')" > /dev/null 2>&1
 EOL
 systemctl start cronie
 systemctl enable cronie

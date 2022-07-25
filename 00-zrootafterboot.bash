@@ -141,7 +141,7 @@ if [ "$1" == "--force" ];then installed='';fi # override when --force
 # noto-fonts-emoji (  9 MB)
 # noto-fonts-extra (321 MB)
 #
-packages="fluxbox,xorg-server,xf86-video-fbdev,xorg-xmodmap,xorg-xinit,xorg-xset,accountsservice,lightdm,lightdm-gtk-greeter,unclutter,firefox,chromium,ttf-liberation,ttf-dejavu,feh,alsa-tools,alsa-utils,alsa-firmware,youtube-dl,rtmpdump,python-pycryptodome,omxplayer-git,vim,cronie" # noto-fonts,noto-fonts-cjk,noto-fonts-emoji,noto-fonts-extra"
+packages="fbida,fluxbox,xorg-server,xf86-video-fbdev,xorg-xmodmap,xorg-xinit,xorg-xset,xorg-xmessage,accountsservice,lightdm,lightdm-gtk-greeter,unclutter,firefox,chromium,ttf-liberation,ttf-dejavu,feh,alsa-tools,alsa-utils,alsa-firmware,youtube-dl,rtmpdump,python-pycryptodome,omxplayer-git,vim,cronie" # noto-fonts,noto-fonts-cjk,noto-fonts-emoji,noto-fonts-extra"
 # install packages from list
 for i in $(echo $packages | sed "s/,/ /g")
 do
@@ -245,6 +245,13 @@ session-wrapper=/etc/lightdm/Xsession
 [VNCServer]
 EOL
 
+
+########################################################################
+# prepare splashscreen setup
+########################################################################
+# download raspisignage splashimage to /opt/splash.png
+curl 'https://raw.githubusercontent.com/boschkundendienst/raspisignage/master/documentation_DE/images/raspisignage-boot-splash.png' -o /opt/splash.png
+
 ########################################################################
 # create .fluxbox folder in home of user alarm and fix permissions
 ########################################################################
@@ -275,6 +282,11 @@ url='https://chemnitzer.linux-tage.de/'
 # hide mouse cursor on inactivity with unclutter
 unclutter &
 ########################################################################
+
+########################################################################
+# set raspisignage wallpaper
+########################################################################
+/usr/bin/fbsetbg -f /opt/splash.png
 
 ########################################################################
 # PREPARE FOR FIREFOX
@@ -335,6 +347,7 @@ ln -sfrn /dev/shm/chromium /home/alarm/.cache/chromium
 exec fluxbox
 EOL
 chown alarm:alarm /home/alarm/.fluxbox/startup
+
 
 ########################################################################
 # enable and start lightdm

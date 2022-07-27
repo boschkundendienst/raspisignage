@@ -173,6 +173,8 @@ If you just want to build a Digital Signage Player that opens the URL specified 
 
 ## Preparing for a CMS/server setup (optional)
 
+**Before running `srv_rootafterboot.bash` on the Pi, make sure that it either has a fixed IP or always receives the identical IP from the DHCP server since the IP address will be used in configuration files. If (for whatever reason) the IP address changes, you have to re-run `srv_rootafterboot.bash` again. It will update the necessary files with the new IP and !! also reset the password for the user `dsadmin`, so watch the output for the new password. !!**
+
 For the server part (running a wordpress CMS standalone or besides the player) follow the instructions for the player but additionally also edit the file `00-zsrv_rootafterboot.bash`. This file will be copied to `/root/srv_rootafterboot.bash` to the Pi, so it is even possible to edit it later directly on the Pi if you currently don't know if the Pi should become a "server" or not.
 
 ### 00-zsrv_rootafterboot.bash

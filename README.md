@@ -28,6 +28,7 @@
         - [Backup wordpress](#backup-wordpress)
         - [Ramdisk](#ramdisk)
         - [VNC server](#vnc-server)
+    - [Troubleshooting](#troubleshooting)
 
 <!-- /TOC -->
 ## What is RaspiSignage?
@@ -424,3 +425,7 @@ The subfolder `build_mlbrowser` contains the script `build_mlbrowser.bash` that 
 ```bash
 mlbrowser -z 1 -platform linuxfb https://github.com/boschkundendienst/raspisignage
 ```
+
+## Troubleshooting
+
+For troubleshooting tips look in the [troubleshooting/README.md](troubleshooting/README.md)

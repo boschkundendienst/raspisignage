@@ -32,3 +32,13 @@ initramfs initramfs-linux.img followkernel
 # Run as fast as firmware / board allows
 arm_boost=1
 ```
+
+## Wordpress
+
+### Wordpress page not showing or chopped up
+
+A non-working or chopped up wordpress site usually occurs if the IP address of the Pi (configured as server) had an IP change. To fix it, just rerun `srv_rootafterboot.bash` again on the Pi. This will update the IP address in the necessary configuration files. As a side effect, the passwords for the database and the `dsadmin` account will be re-generated, so watch for the output of the script to have the new passwords available.
+
+### I forgot the password for dsadmin
+
+If you forgot the password for the user `dsadmin`, just rerun the script `srv_rootafterboot.bash` on the Pi. It will regenerate all passwords! Make sure you watch the output of the script to get the new passwords.

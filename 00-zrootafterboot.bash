@@ -230,6 +230,7 @@ chown alarm:alarm /home/alarm/.xinitrc
 ########################################################################
 cat >"/etc/lightdm/lightdm.conf" <<EOL
 [LightDM]
+logind-check-graphical=false
 start-default-seat=true
 greeter-user=lightdm
 minimum-display-number=0

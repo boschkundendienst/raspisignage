@@ -42,3 +42,27 @@ A non-working or chopped up wordpress site usually occurs if the IP address of t
 ### I forgot the password for dsadmin
 
 If you forgot the password for the user `dsadmin`, just rerun the script `srv_rootafterboot.bash` on the Pi. It will regenerate all passwords! Make sure you watch the output of the script to get the new passwords.
+
+### change wordpress settings via CLI
+
+By default the wordpress backend of RaspiSignage is configured to list on `http://<ip of pi>`. If the IP changes wordpress might no longer function. Besides that you should always use a fixed IP when using the server part of RaspiSignage you could update the `siteurl`, `home` and `blogname` of the wordpress installation using `wp-cli.phar`.
+
+**Example 1**
+
+Replace every occurrence of `http://10.11.12.13` in the wordpress database with `http://dsserver`
+
+```bash
+php /root/wp-cli.phar search-replace http://10.11.12.13 http://dsserver --allow-root --path=/srv/http/
+```
+
+**Example 2**
+
+Change `siteurl`, `home` or `blogname` of the wordpress instance
+
+```bash
+php /root/wp-cli.phar option set siteurl http://dsserver --allow-root --path=/srv/http/
+php /root/wp-cli.phar option set home http://dsserver --allow-root --path=/srv/http/
+php /root/wp-cli.phar option set blogname dsserver --allow-root --path=/srv/http/
+```
+
+**Of course you can also change other settings using `wp-cli.phar` just type `php /root/wp-cli.phar --help --allow-root` to see all options**

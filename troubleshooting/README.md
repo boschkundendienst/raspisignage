@@ -66,3 +66,15 @@ php /root/wp-cli.phar option set blogname dsserver --allow-root --path=/srv/http
 ```
 
 **Of course you can also change other settings using `wp-cli.phar` just type `php /root/wp-cli.phar --help --allow-root` to see all options**
+
+## Chromium not starting
+**September 29th 2022**
+
+Chromium does not start after updating the system. Chromium searches for `libFLAC.so.8` but archlinux delivers `libFLAC.so.12`. As a workarround you could just create a symlink for `libFLAC.so.8` in `/usr/lib` with the following commands:
+
+```
+cd /usr/lib
+ln -s libFLAC.so libFLAC.so.8
+```
+
+Chromium now starts again. I hope the Chromium package will be updated, soon.

@@ -137,6 +137,7 @@ fi
 ########################################################################
 echo -n "Setting KEYMAP to $mykbdlayout in /etc/vconsole.conf..."
 echo "KEYMAP=$mykbdlayout" > ./root/etc/vconsole.conf
+echo "FONT=Lat2-Terminus16" >> ./root/etc/vconsole.conf
 echo -e "\t\t\t\tdone"
 
 ########################################################################

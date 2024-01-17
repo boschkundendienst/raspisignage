@@ -169,6 +169,8 @@ cat >>"/etc/crontab" <<'EOL'
 
 ## Rundschau 100 Sekunden
 #0 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/yt-dlp -g 'https://www.br.de/br-fernsehen/sendungen/rundschau/rundschau-news100.html')" >/dev/null 2>&1
+## Rundschau 100 Sekunden update url (2024)
+#0 * * * * root /usr/bin/omxplayer --vol -900 "https://redirect.br.de/br/bayerisches-fernsehen/rundschau/rsn100/rundschaunews_XL.mp4" >/dev/null 2>&1
 ## Heute Xpress aktuelle Sendung
 #5 * * * * root /usr/bin/omxplayer --vol -900 "$(/usr/bin/yt-dlp -g 'https://www.zdf.de/nachrichten/heute-sendungen/videos/heute-xpress-aktuelle-sendung-100.html')" > /dev/null 2>&1
 ## Tagesschau 100 Sekunden

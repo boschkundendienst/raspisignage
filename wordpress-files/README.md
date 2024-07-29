@@ -1,1 +1,2 @@
 
+install_wordpress.bash
